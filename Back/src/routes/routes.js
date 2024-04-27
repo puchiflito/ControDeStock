@@ -4,6 +4,7 @@ const {
   crearProductoHandler,
   actualizarProductoHandler,
   productoIdHandler,
+  borrarProductoHandler,
 } = require("../handlers/index.handler");
 
 const router = Router();
@@ -18,4 +19,5 @@ router.get("/productos", prouctoHandler);
 router.get("/productos/:id", productoIdHandler);
 router.post("/productos", crearProductoHandler);
 router.put("/productos/:id", actualizarProductoHandler);
+router.delete("/productos/:id", borrarProductoHandler);
 module.exports = router;
