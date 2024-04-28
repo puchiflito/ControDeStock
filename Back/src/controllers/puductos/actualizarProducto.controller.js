@@ -1,4 +1,4 @@
-const stock = require("../../models/stock");
+const Stock = require("../../models/stock");
 
 const actualizarProducto = async ({
   id,
@@ -8,7 +8,7 @@ const actualizarProducto = async ({
   descuento,
 }) => {
   try {
-    const producto = await stock.findByPk(id);
+    const producto = await Stock.findByPk(id);
     if (!producto) return "No hay producto para modificar con ese id";
     await producto.update({ nombre, precio, descripcion, descuento });
     return producto;

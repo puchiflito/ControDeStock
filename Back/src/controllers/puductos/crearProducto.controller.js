@@ -1,7 +1,7 @@
-const stock = require("../../models/stock");
+const Stock = require("../../models/stock");
 
 const crearProducto = async ({ nombre, precio, descripcion, descuento }) => {
-  const producto = await stock.create({
+  const producto = await Stock.create({
     nombre,
     precio,
     descripcion,

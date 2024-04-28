@@ -1,8 +1,8 @@
-const stock = require("../../models/stock");
+const Stock = require("../../models/stock");
 
 const productoIdController = async ({ id }) => {
   try {
-    const producto = await stock.findOne({
+    const producto = await Stock.findOne({
       where: {
         id: id,
       },

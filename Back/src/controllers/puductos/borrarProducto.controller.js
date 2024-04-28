@@ -1,8 +1,8 @@
-const stock = require("../../models/stock");
+const Stock = require("../../models/stock");
 
 const borrarProductoController = async ({ id }) => {
   try {
-    const producto = await stock.findByPk(id);
+    const producto = await Stock.findByPk(id);
     const productoBorrado = await producto.destroy({
       where: {
         id: id,

@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const { conexionDBUser } = require("../database/database");
 const { v4: uuid } = require("uuid");
 
-const users = conexionDBUser.define("users", {
+const Users = conexionDBUser.define("Users", {
   id: {
     type: DataTypes.UUID,
     defaultValue: () => uuid(),
@@ -26,4 +26,4 @@ const users = conexionDBUser.define("users", {
   },
 });
 
-module.exports = users;
+module.exports = Users;
