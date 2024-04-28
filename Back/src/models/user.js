@@ -20,6 +20,10 @@ const users = conexionDBUser.define("users", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  roles: {
+    type: DataTypes.ARRAY(DataTypes.STRING),
+    allowNull: false,
+  },
 });
 
 module.exports = users;
